@@ -1,0 +1,14 @@
+# Use the latest Ubuntu image as the base
+FROM ubuntu:latest
+
+# Update and upgrade APT packages
+RUN apt-get update && apt-get upgrade -y
+
+# Install Python 3 and pip3
+RUN apt-get install -y python3 python3-pip
+
+# Install Flask
+RUN pip3 install Flask
+
+# Set the command to echo "Hello, World!" when the container runs
+CMD echo "Hello, World!"
