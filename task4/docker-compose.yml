@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./task2/front-end
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./task4/front-end/softy-pinko-front-end:/var/www/html/softy-pinko-front-end
+
+  backend:
+    build: ./task4/back-end
+    ports:
+      - "5252:5252"
